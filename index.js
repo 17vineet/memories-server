@@ -19,6 +19,10 @@ app.use(cors()) ;
 app.use('/posts' , postsRoutes) ;
 app.use('/users' , userRoutes) ;
 
+app.get('/', (req,res)=> {
+    res.send('App is running') ;
+})
+
 const PORT = process.env.PORT || 7789 ; 
 
 //to know more about cors see the YT video 
